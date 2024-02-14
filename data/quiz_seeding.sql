@@ -1,0 +1,178 @@
+-- SQLBook: Code
+BEGIN;
+
+TRUNCATE TABLE "role", "tag", "level", "user", "quiz", "question", "answer", "score" RESTART IDENTITY CASCADE;
+
+INSERT INTO "role" ("name") VALUES
+('Admin'),
+('Member');
+
+INSERT INTO "tag" ("name") VALUES
+('Histoire et Géographie'),
+('Science'),
+('Sport'),
+('Cuisine'),
+('Nature'),
+('Langue'),
+('Art & Musique'),
+('Developpeur web'),
+('Littérature'),
+('Gaming'),
+('Télé'),
+('Questions mixtes');
+
+INSERT INTO "level" ("name") VALUES
+('Facile'),
+('Modéré'),
+('Difficile'),
+('Nerd'),
+('Elon Musk');
+
+INSERT INTO "user" ("pseudo", "email", "password", "role_id") VALUES
+('Bibi', 'bibi@outlook.com', 'bibiche', 1),
+('Bobo', 'bobo@outlook.com', 'boboche', 1),
+('Bubu', 'bubu@outlook.com', 'bubuche', 2);
+
+INSERT INTO "quiz" ("name", "tag_id", "level_id") VALUES
+('Les animes', 11, 3),
+('La gastronomie française', 4, 2),
+('Histoire et géographie Française', 1, 2),
+('À la française', 1, 3);
+
+INSERT INTO "question" ("description", "quiz_id") VALUES
+('Combien compte-t-on de régions administratives en France ?', 4),
+('Quelle est la superficie de l''Hexagone ?', 4),
+('Le Mont-Saint-Michel se trouve ?', 4),
+('Qui a peint le tableau « La liberté guidant le peuple » ?', 4),
+('En quelle année débuta la Guerre de Cent Ans ?', 4),
+('Qui a réalisé le film « Le fabuleux destin d''Amélie Poulain » ?', 4),
+('L''une des sculptures les plus connues de Rodin est ?', 4),
+('Qui a dit « Je pense donc je suis » ?', 4),
+('Quand se termine « la Belle Epoque ?', 4),
+('Qui a gagné la coupe du monde de football en 1998 en France ?', 4),
+(' Qu''y a-t-il dans la boisson qu''on appelle « panaché » ?', 4),
+('Eh,ah,oh sont des :', 4),
+(' Dans quel océan le département d''outre-mer la Réunion est-il situé ?', 4),
+('Quelle est la capitale du Maroc ?', 4),
+('Quel homme politique est à l''origine de la Fête de la Musique en France ?', 4),
+('Qui a dit : «J''y suis j''y reste !» ?', 4),
+('Quel architecte a conçu la pyramide du Louvre à Paris ?', 4),
+('Quelle ville française n''est pas située sur le Rhône ?', 4),
+('Quel est le vrai nom de Mata Hari ?', 4),
+('En 1945, le premier parti politique français est ?', 4),
+('Comment s''appelle la première nouvelle transformation découverte par Goku ?', 1),
+('De quel animé fait partie Natsu Dragnir ?', 1),
+('De quel animé fait partie Asta ?', 1),
+('Que promet Goku à Zeno ?', 1);
+
+
+INSERT INTO "answer" ("description", "question_id", "is_good_answer") VALUES
+('13', 1, true),
+('22', 1, false),
+('25', 1, false),
+('18', 1, false),
+('550 000 km2', 2, true),
+('750 000 km2' , 2, false),
+('670 000 km2', 2, false),
+('650 000 km2', 2, false),
+('en Provence ', 3, false),
+('en Bretagne', 3, false),
+('en Normandie', 3, true),
+('à Paris', 3, false),
+('Delacroix ', 4, true),
+('Rubens ', 4, false),
+('Picasso', 4, false),
+('Dali', 4, false),
+('1209', 5, false),
+('1337', 5, true),
+('1453', 5, false),
+('100', 5, false),
+('Bertrand Belier', 6, false),
+('Claude Lelouch', 6, false),
+('Luc Besson', 6, false),
+('Jean-Pierre Jeunet', 6, true),
+('Le cri', 7, false),
+('Le Rêveur', 7, false),
+('Le Savant', 7, false),
+('Le Penseur', 7, true),
+('Pascal', 8, false),
+(' Descartes', 8, true),
+('Rousseau', 8, false),
+('Châteaubriant', 8, false),
+('1871', 9, false),
+('1914', 9, true),
+('1818', 9, false),
+('1939', 9, false),
+('La France', 10, true),
+('L''allemagne', 10, false),
+('Le Brésil ', 10, false),
+('L''Italie', 10, false),
+('Du sirop de canne et du rhum', 11, false),
+('De la bière et du coca', 11, false),
+('De la bière et de la limonade ', 11, true),
+('Du coca et du soda', 11, false),
+('Onomatopées ', 12, true),
+('Honomatopés', 12, false),
+('Honomatopées', 12, false),
+('Onomataupés', 12, false),
+('L''Océan Indien', 13, true),
+('La mer Noire', 13, false),
+('L''Atlantique ', 13, false),
+('Le Pacifique', 13, false),
+('Casablanca', 14, false),
+('Agadir', 14, false),
+('Rabat', 14, true),
+('Marrakech', 14, false),
+('Jack Lang ', 15, true),
+('René Auby', 15, false),
+('Bernard Tapie', 15, false),
+('Maurice Fleuret', 15, false),
+('le général Mac Mahon', 16, true),
+('le général De Gaulle', 16, false),
+('Macron Emmanuel', 16, false),
+('Napoléon', 16, false),
+('Charles Garnier ', 17, false),
+('Auguste Perret', 17, false),
+('Ieoh Ming Pei', 17, true),
+('Le Corbusier', 17, false),
+('Vienne', 18, true),
+('Avignon', 18, false),
+('Lyon', 18, false),
+('Nimes', 18, false),
+('Margaretha Zakahari', 19, false),
+('Margaretha Zelle ', 19, true),
+('Martha Zakahari', 19, false),
+('Martha Zelle', 19, false),
+(' Le Parti communiste', 20, true),
+('Le MRP', 20, false),
+('Le centre', 20, false),
+('Le Parti socialiste SFIO ', 20, false),
+('Super Saiyan Bleue', 21, false),
+('Super Saiyan God', 21, true),
+('Super Saiyan 4', 21, false),
+('Super Saiyan Légendaire', 21, false),
+('Fairy Tail', 22, true),
+('One piece', 22, false),
+('Naruto', 22, false),
+('Dragon ball Z', 22, false),
+('Naruto', 23, false),
+('Black bulter', 23, false),
+('Black Clover', 23, true),
+('Inazuma Eleven', 23, false),
+('Un grand combat', 24, false),
+('Etre son ami', 24, false),
+('Les dragons balls', 24, false),
+('Une abondance de nouritture', 24, true);
+
+
+INSERT INTO "score" ("score", "user_id", "quiz_id", "max_score") VALUES
+(10, 2, 1, 20),
+(5, 2, 2, 12),
+(8, 2, 3, 10),
+(35, 3, 2, 50),
+(1, 3, 1, 10),
+(3, 3, 4, 5);
+
+
+COMMIT;
+
