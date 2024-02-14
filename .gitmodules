@@ -1,3 +1,6 @@
 [submodule "quiz-front"]
 	path = quiz-front
 	url = git@github.com:O-clock-Starship/projet-13-quizs-front.git
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:O-clock-Starship/projet-13-quizs-front.git
