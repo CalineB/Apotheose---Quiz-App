@@ -96,7 +96,7 @@ router.post('/score', scoreController.postScore);
  *  @description Calculate and render final score
  *  @param {integer} id.score - Scores id
  *  @param {integer} score.score - Score is a number
- * @param {ScoreRequest} score.body - Score in number
+ * @param {ScoreRequest} request.body - Score in number
  * @return {UserResponse} 200 - Updated user object
  * @throws {NotFoundError} 404 - User not found
  * @throws {InternalServerError} 500 - Internal server error

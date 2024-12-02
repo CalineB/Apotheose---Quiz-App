@@ -23,9 +23,23 @@ As students of the great O'clock School of Computer Science, we have the honor a
 * Sequelize,
 * SQL,
 * Sqitch,
-* Joi,
-* Insomnia,
 * Swagger
+
+
+## Run app
+
+Add .env file to ""/project-13-quizs-front" according to the /.env.example
+  Back :
+  - Create database "psql -U postgres" or with our username.
+  - Update .env informations if needed to access to your database.
+  - connect to the SQL file to your database : 'psql -U postgres -d work -f data/quiz_seeding.sql' (replace 'postgres' by your database username and 'work' by your database name if differen)
+  - 'sqitch deploy'
+  - 'npm run dev', from roots.
+ 
+  Front : 
+  'npm run build'
+  'npm start index.js' from "/project-13-quizs-front".
+
 
 ## Supported browser
 
@@ -84,8 +98,3 @@ You can install the modules with "npm i -S
 * Darkmode
 * Visually and hearing impaired accessibility
   
-## Run app
-
-Add .env file to ""/project-13-quizs-front" according to the /.env.example
-  Back : 'npm run dev', from roots.
-  Front : 'npm run dev' from "/project-13-quizs-front".
