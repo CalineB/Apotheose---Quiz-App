@@ -30,6 +30,7 @@ As students of the great O'clock School of Computer Science, we have the honor a
 
 Add .env file to ""/project-13-quizs-front" according to the /.env.example
   Back :
+  'npm i'
   - Create database "psql -U postgres" or with our username.
   - Update .env informations if needed to access to your database.
   - connect to the SQL file to your database : 'psql -U postgres -d work -f data/quiz_seeding.sql' (replace 'postgres' by your database username and 'work' by your database name if differen)
@@ -38,6 +39,7 @@ Add .env file to ""/project-13-quizs-front" according to the /.env.example
  
   Front : 
   'npm run build'
+  'npm i'
   'npm start index.js' from "/project-13-quizs-front".
 
 

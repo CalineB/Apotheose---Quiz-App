@@ -116,6 +116,9 @@ web_modules/
 .rts2_cache_es/
 .rts2_cache_umd/
 
+# Front end (pushed apart)
+.frontend
+
 # Optional REPL history
 .node_repl_history
 

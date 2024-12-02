@@ -1,0 +1,69 @@
+quizIndividuel = {
+  id: ,
+  title: ,
+  slug: ,
+  tag: {
+    id: ,
+    label: ,
+  },
+  level: {
+    id: ,
+    label: ,
+  },
+  question: [
+    {
+      id: ,
+      description: ,
+      answer: [
+        {
+          id: ,
+          description: ,
+          isgoodanswer: ,
+        },
+        {
+          id: ,
+          description: ,
+          isgoodanswer: ,
+        },
+      ]
+    },
+    {
+      id: ,
+      description: ,
+      answer: [
+        {
+          id: ,
+          description: ,
+          isgoodanswer: ,
+        },
+        {
+          id: ,
+          description: ,
+          isgoodanswer: ,
+        },
+      ]
+    },
+  ]
+}
+
+profilAdmin = {
+  id: ,
+  email: ,
+  pseudo: ,
+  password: ,
+  role: {
+    id: ,
+    label: ,
+  },
+};
+
+tags/themes = [
+  {
+    id: ,
+    label: ,
+  },
+  {
+    id: ,
+    label: ,
+  },
+]
