@@ -33,14 +33,14 @@ Add .env file to ""/project-13-quizs-front" according to the /.env.example
   'npm i'
   - Create database "psql -U postgres" or with our username.
   - Update .env informations if needed to access to your database.
-  - connect to the SQL file to your database : 'psql -U postgres -d work -f data/quiz_seeding.sql' (replace 'postgres' by your database username and 'work' by your database name if differen)
+  - connect to the SQL file to your database : 'psql -U postgres -d work -f data/quiz_seeding.sql' (replace 'postgres' by your database username and 'work' by your database name if different)
   - 'sqitch deploy'
   - 'npm run dev', from roots.
  
   Front : 
   'npm run build'
   'npm i'
-  'npm start index.js' from "/project-13-quizs-front".
+  'npm start index.js' from "/project-13-quizs".
 
 
 ## Supported browser
